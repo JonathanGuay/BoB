@@ -29,15 +29,17 @@ Objectifs
 -	Déterminer les formulaires et boutons nécessaires pour pouvoir utiliser votre application.
 
 Personne :
-Nom
+    Nom
     Compte
     NbHeureTravaillerJour
     salaireHeure
     listeAnimaux
     string photo
+    profession
 
 méthode :
 -	avancerTemps
+- ajouterAnimaux
 
 Classe Compte :
     Solde
@@ -55,7 +57,7 @@ Classe animaux abstaite
      FraisNourriture
      Date_DernierRepas -> datetime
      String photo
-     
+
     Méthode :
      	nourrireAnimaux
      	CalculerSiFaim-> compare la dure avant faim et change propriété faim

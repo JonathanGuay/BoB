@@ -4,6 +4,21 @@ namespace model;
 
 class Compte
 {
+    /**
+     * @return int
+     */
+    public function getSolde(): int
+    {
+        return $this->solde;
+    }
+
+    /**
+     * @param int $solde
+     */
+    public function setSolde(int $solde): void
+    {
+        $this->solde = $solde;
+    }
     private int $solde;
 
     /**
