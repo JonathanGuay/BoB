@@ -30,20 +30,23 @@ Objectifs
 
 Personne :
 Nom
-Compte
-NbHeureTravaillerJour
-salaireHeure
-listeAnimaux
-string photo
+    Compte
+    NbHeureTravaillerJour
+    salaireHeure
+    listeAnimaux
+    string photo
+
 méthode :
 -	avancerTemps
 
 Classe Compte :
-Solde
-Méthode :
--	Dépôt
--	Debit
-     Classe animaux abstaite
+    Solde
+
+    Méthode :
+        Dépôt
+        Debit 
+
+Classe animaux abstaite
      Nom
      Type
      Son
@@ -52,7 +55,8 @@ Méthode :
      FraisNourriture
      Date_DernierRepas -> datetime
      String photo
-     Méthode :
+     
+    Méthode :
      	nourrireAnimaux
      	CalculerSiFaim-> compare la dure avant faim et change propriété faim
 
