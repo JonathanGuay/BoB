@@ -1,7 +1,8 @@
 <?php
 
 namespace model;
-
+require Animal::class;
+require Compte::class;
 class Personne
 {
     public string $nom;
@@ -18,6 +19,11 @@ class Personne
         $this->nbHeureTravaillerJour = $nbHeureTravaillerJour;
         $this->salaireHeure = $salaireHeure;
         $this->photo = $photo;
+        $this->listeAnimaux = array();
+    }
+    public function __construct2(string $nom) {
+        $this->nom = $nom;
+
         $this->listeAnimaux = array();
     }
 
