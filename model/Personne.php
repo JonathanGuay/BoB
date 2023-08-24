@@ -1,11 +1,12 @@
 <?php
 
 namespace model;
-require Animal::class;
-require Compte::class;
+require "model/Animal.php";
+require "model/Compte.php";
 class Personne
 {
     public string $nom;
+    public string $profession;
     public Compte $compte;
     public int $nbHeureTravaillerJour;
     public float $salaireHeure;
@@ -13,8 +14,9 @@ class Personne
     public $listeAnimaux;
 
     // Constructeur de la classe MonZoo
-    public function __construct(string $nom, Compte $compte, int $nbHeureTravaillerJour, float $salaireHeure, string $photo) {
+    public function __construct(string $nom, string $profession, Compte $compte, int $nbHeureTravaillerJour, float $salaireHeure, string $photo) {
         $this->nom = $nom;
+        $this->profession = $profession;
         $this->compte = $compte;
         $this->nbHeureTravaillerJour = $nbHeureTravaillerJour;
         $this->salaireHeure = $salaireHeure;

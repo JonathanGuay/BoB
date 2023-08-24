@@ -1,8 +1,10 @@
 <?php
     namespace model;
-    require "Personne.php";
+    require "model/Personne.php";
     // nom de la personne
     $nom = "Bob";
+    // profession
+    $profession = "Programmeur";
     // Création de compte
     $compte = new Compte();
     // Nom d'heure travaillé par jour pour l'utilisateur
@@ -11,7 +13,7 @@
     $salaire = 22.50;
     // Photo de bob
     $photo = "";
-    $personne = new Personne($nom, $compte, $nbHeureTravaillerJour, $salaire, $photo);
+    $personne = new Personne($nom, $profession, $compte, $nbHeureTravaillerJour, $salaire, $photo);
 ?>
 
 <!DOCTYPE html>
@@ -19,43 +21,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire cool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
 
 <h1>La vie de </h1>
 
 <div class="row mt-4">
-    @foreach (var item in Model)
-    {
     <div class="col-md-3 mb-4 ">
         <div class="card colorr">
-            <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="" class="card-img-top">
+            <img src="<?php echo $photo; ?>" alt="" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nom)</h5>
-                <p class="card-text"><strong>Prix: @Html.DisplayFor(modelItem => item.Cout)</strong></p>
+                <h5 class="card-title"><?php echo $nom; ?></h5>
+                <p class="card-text"><strong><?php echo $profession; ?></strong></p>
 
-                @*On s'assure que l'utilisateur est connecté pour pouvoir ajouter un sushi au panier*@
-                @if (@UserManager.GetUserName(User) == null)
-                {
-                <p>Veuillez-vous connecter pour ajouter l'item au panier</p>
-                }
-                else{
-                @*Bouton pour ajouter un sushi au panier*@
-                <a class="btn btn-primary" asp-area="" asp-route-Idsushi="@item.Id" asp-controller="Home"
-                   asp-action="AjouterSushiAuPanier" asp-route-userId="@UserManager.GetUserName(User)">Ajouter au panier</a>
-                }
-
-
-                @*Bouton pour accéder à la vue de détails*@
-                <a class="btn btn-primary mt-2" asp-route-id="@item.Id" asp-area="" asp-controller="Home"
-                   asp-action="Details">Accéder au détail</a>
             </div>
         </div>
     </div>
-    }
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
 </body>
 </html>
 
