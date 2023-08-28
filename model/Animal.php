@@ -24,14 +24,13 @@ abstract class Animal
      * @param DateTime $dernierRepas
      * @param string $photo
      */
-    public function __construct(string $nom, bool $afaim, string $son, int $DureeAvantFaim, int $FraisNourriture, string $type, DateTime $dernierRepas, string $photo)
+    public function __construct(string $nom, bool $afaim, string $son, int $DureeAvantFaim, int $FraisNourriture, DateTime $dernierRepas, string $photo)
     {
         $this->nom = $nom;
         $this->afaim = $afaim;
         $this->son = $son;
         $this->DureeAvantFaim = $DureeAvantFaim;
         $this->FraisNourriture = $FraisNourriture;
-        $this->type = $type;
         $this->dernierRepas = $dernierRepas;
         $this->photo = $photo;
     }
