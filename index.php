@@ -25,9 +25,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-
-<p class="entete">La vie de BOB</p>
     <header class="bg-light p-3 navbar">
+        <div class="container">
         <div class=" d-flex align-items-center">
             <a href="#" title="Retour vers l'accueil">
                 <img src="../fichier/patte2.png" alt="Logo" width="30" height="24">
@@ -40,10 +39,10 @@
                 <li class="nav-item"><a class="nav-link" href="#">Modifier profil</a></li>
             </ul>
         </nav>
+        </div>
     </header>
 
-
-
+<p class="entete">La vie de BOB</p>
 <div class="container">
 <!--Affichage du titre qui comprends seulement les noms-->
 <?php
