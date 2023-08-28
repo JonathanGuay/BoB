@@ -35,8 +35,8 @@
         <nav>
             <ul class="nav flex justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Jeu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Modifier profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Ajout animal</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/ChangerPhotos.html">Modifier photo</a></li>
             </ul>
         </nav>
         </div>
@@ -88,15 +88,15 @@ echo "</h1>";
             <div class="col-md-3 mb-4 ">
                 <div class="card colorr">
                     <div class="image">
-                        <img src="<?php echo $animaux->photo; ?>" alt="" class="card-img-top">
+                        <img src="<?php echo $animaux->getPhoto(); ?>" alt="" class="card-img-top">
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title"><?php echo $animaux->nom; ?></h3>
+                        <h3 class="card-title"><?php echo $animaux->getNom(); ?></h3>
                         <ul>
-                            <li><p class="card-text">Dernier repas : <?php echo $animaux->Dernierrepas; ?></p></li>
-                            <li><p class="card-text">A faim : <?php echo $animaux->SiFaim; ?></p></li>
+                            <li><p class="card-text">Dernier repas : <?php echo $animaux->getDernierRepas(); ?></p></li>
+                            <li><p class="card-text">A faim : <?php echo $animaux->isAfaim(); ?></p></li>
                         </ul>
-                        <button class="btn btn-primary">Nourrir <?php echo $animaux->nom; ?></button>
+                        <button class="btn btn-primary">Nourrir <?php echo $animaux->getNom(); ?></button>
                     </div>
                 </div>
             </div>
