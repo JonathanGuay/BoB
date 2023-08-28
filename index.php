@@ -27,6 +27,22 @@
 <body>
 
 <p class="entete">La vie de BOB</p>
+    <header class="bg-light p-3 navbar">
+        <div class=" d-flex align-items-center">
+            <a href="#" title="Retour vers l'accueil">
+                <img src="../fichier/patte2.png" alt="Logo" width="30" height="24">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav flex justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Jeu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Modifier profil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
 
 <div class="container">
 <!--Affichage du titre qui comprends seulement les noms-->
