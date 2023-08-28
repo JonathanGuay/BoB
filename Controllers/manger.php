@@ -1,20 +1,23 @@
 <?php
 require '../model/Personne.php';
-class travailler{
+
+class manger{
+
     private $personne;
 
     public function __construct() {
         $this->personne = new Personne();
     }
 
-    public function Travailler() {
-        // ajout a l'heure courant
+    public function Manger() {
+        // changer si a faim
 
-        // Changer l'argent dans le compte bancaire
+        // Changer la date de dernier repas
 
         // ramener la vue index
         include '../index.php';
     }
+
 
 
 
